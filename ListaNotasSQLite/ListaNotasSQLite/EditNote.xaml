@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListaNotasSQLite.EditNote"
+             Title="Editar notas">
+    <ContentPage.Content>
+        <Grid ColumnDefinitions="*,*" RowDefinitions="Auto, Auto">
+            <Editor Placeholder="Ingresa el texto"
+                    Text="{Binding text}"
+                    Grid.ColumnSpan="2"
+                    HeightRequest="100"/>
+
+            <Button Text="Guardar"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    Clicked="Save_Clicked"/>
+            <Button Grid.Column="1"
+                    Text="Borrar"
+                    Grid.Row="1"
+                    Clicked="Delete_Clicked"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
